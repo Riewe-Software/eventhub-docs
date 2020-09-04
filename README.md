@@ -39,3 +39,23 @@ Use the eventhub CLI to upload the file into your workspace.
 ```
 eventhub-cli push events.json -e [YOUR_EMAIL] -p [YOUR_PASSWORD] -o [YOUR_ORGANIZATION] -w [YOUR_WORKSPACE]
 ```
+## Step 4: Implement the client SDK in your application
+Install the eventhub client SDK:
+```
+pip install eventhub
+```
+Create a new file and save it as `demo.py`. Paste the following content:
+```python
+from eventhub import Eventhub
+
+eventhub = Eventhub(base_url="http://127.0.0.1:5000",
+                    email="[YOUR_EMAIL]",
+                    password="[YOUR_PASSWORD]",
+                    organization_name="[YOUR_ORGANIZATION]",
+                    workspace_name="[YOUR_WORKSPACE]",
+                    app_name="demo-app")
+
+test_data = {"hello": "hallo", "world": "welt"}
+
+eventhub.validate_event("hello.world", test_data)
+```
