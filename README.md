@@ -7,7 +7,6 @@ This guide will help you get up and running with your free EventHub account in m
 3. Create your first event definition
 4. Implement the client SDK in your application
 5. Check event usage
-6. Next Steps
 ## Step 1: Install the CLI
 Before creating an account and writing your first event definition, install the eventhub CLI. It’s open source and available on GitHub.
 ```
@@ -58,4 +57,8 @@ eventhub = Eventhub(base_url="http://127.0.0.1:5000",
 test_data = {"hello": "hallo", "world": "welt"}
 
 eventhub.validate_event("hello.world", test_data)
+```
+## Step 5: Check event usage
+```
+eventhub-cli usage hello.world -e [YOUR_EMAIL] -p [YOUR_PASSWORD] -o [YOUR_ORGANIZATION] -w [YOUR_WORKSPACE]
 ```
