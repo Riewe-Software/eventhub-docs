@@ -47,7 +47,7 @@ Create a new file and save it as `demo.py`. Paste the following content:
 ```python
 from eventhub import Eventhub
 
-eventhub = Eventhub(base_url="http://127.0.0.1:5000",
+eventhub = Eventhub(base_url="https://eventhub-backend-dev.herokuapp.com/",
                     email="[YOUR_EMAIL]",
                     password="[YOUR_PASSWORD]",
                     organization_name="[YOUR_ORGANIZATION]",
