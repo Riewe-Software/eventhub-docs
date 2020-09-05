@@ -15,7 +15,7 @@ pip install eventhub-cli
 ## Step 2: Sign up for your free EventHub-Account
 Now that the eventhub CLI is installed on your operating system, let’s create an account. Run the signup command and claim yours:
 ```
-eventhub-cli signup
+eventhub-cli signup [YOUR_EMAIL] [YOUR_PASSWORD]
 ```
 You now have your very own EventHub account! Go ahead and create an organization and a workspace.
 ## Step 3: Create your first event definition
